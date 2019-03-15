@@ -46,11 +46,11 @@ def arduino_soundlight():
     # Enable stereo mixing in your sound card
     # to make you sound output an input
     # Use list_devices() to list all your input devices
-    device   = 10
+    device   = 14
     
     p = pyaudio.PyAudio()
     stream = p.open(format = pyaudio.paInt16,
-                    channels = 1,
+                    channels = 2,
                     rate = 44100,
                     input = True,
                     frames_per_buffer = chunk,
